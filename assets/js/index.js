@@ -12,14 +12,3 @@ window.addEventListener('scroll', () => {
     a.classList.toggle('active', hash === current);
   });
 });
-
-document.querySelectorAll('.project-card').forEach(card => {
-  const link = card.querySelector('.project-arrow');
-  if (!link) return;
-  card.addEventListener('click', e => {
-    if (!e.target.closest('a')) window.location.href = link.href;
-  });
-  card.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') window.location.href = link.href;
-  });
-});
